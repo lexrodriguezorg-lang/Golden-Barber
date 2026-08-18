@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agregar reseña — Golden Barber</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bevan&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .tool { padding-block: 2rem 4rem; max-width: 34rem; }
+  .tool h1 {
+    font-family: var(--display); font-size: 1.5rem; text-transform: uppercase;
+    color: var(--wine); text-align: center;
+  }
+  .tool .intro { text-align: center; color: var(--muted); font-size: .9rem; margin-top: .5rem; }
+
+  .paso {
+    margin-top: 1.5rem; padding: 1.25rem;
+    background: var(--paper); border: 1px solid rgb(196 160 70 / .55);
+    border-radius: var(--radius);
+  }
+  .paso > h2 {
+    display: flex; align-items: center; gap: .6rem;
+    font-family: var(--display); font-size: .95rem;
+    text-transform: uppercase; margin-bottom: .9rem;
+  }
+  .paso > h2 b {
+    display: grid; place-items: center; width: 1.7rem; height: 1.7rem;
+    background: var(--wine); color: var(--cream); border-radius: 50%;
+    font-size: .8rem; flex: none;
+  }
+
+  .campo textarea, .campo select {
+    width: 100%; padding: .8rem 1rem;
+    background: var(--cream); border: 1px solid rgb(196 160 70 / .5);
+    border-radius: var(--radius); font: inherit; color: var(--ink);
+  }
+  .campo textarea { min-height: 6.5rem; resize: vertical; }
+  .campo + .campo { margin-top: 1rem; }
+
+  .foto-zona { display: flex; align-items: center; gap: 1rem; }
+  .foto-prev {
+    width: 88px; height: 88px; flex: none; border-radius: 50%;
+    border: 2px dashed rgb(196 160 70 / .7);
+    display: grid; place-items: center;
+    color: var(--muted); font-size: .65rem; text-align: center;
+    object-fit: cover; overflow: hidden;
+  }
+  .foto-prev img { width: 100%; height: 100%; object-fit: cover; }
+  input[type=file] { font: inherit; font-size: .85rem; max-width: 100%; }
+
+  .permiso {
+    display: flex; gap: .7rem; align-items: flex-start;
+    padding: 1rem; background: var(--cream);
+    border: 1px solid var(--wine); border-radius: var(--radius);
+    font-size: .85rem; line-height: 1.5;
+  }
+  .permiso input { width: 1.15rem; height: 1.15rem; flex: none; margin-top: .15rem; accent-color: var(--wine); }
+
+  .salida { display: none; }
+  .salida.activa { display: block; }
+  .salida code {
+    display: block; padding: 1rem; margin-top: .5rem;
+    background: var(--ink); color: var(--cream-deep);
+    border-radius: var(--radius);
+    font-family: ui-monospace, Consolas, monospace; font-size: .78rem;
+    white-space: pre-wrap; word-break: break-word;
+  }
+  .botones { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+  .aviso { font-size: .8rem; color: var(--muted); margin-top: .75rem; }
+  .falta { color: var(--wine); font-weight: 700; font-size: .85rem; margin-top: .75rem; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="index.html">
+      <img class="nav__logo" src="img/emblem-golden.webp" alt="" width="36" height="36">
+      <span>Golden Barber</span>
+    </a>
+  </div>
+</header>
+
+<main class="wrap tool">
+  <h1>Agregar una reseña</h1>
+  <p class="intro">
+    Página interna. Llénala con el cliente presente y te deja la foto lista
+    y el texto para publicar.
+  </p>
+
+  <!-- 1. Permiso -->
+  <section class="paso">
+    <h2><b>1</b> Permiso del cliente</h2>
+    <label class="permiso">
+      <input type="checkbox" id="permiso">
+      <span>
+        El cliente me autorizó a publicar <strong>su foto y su nombre</strong>
+        en la página de Golden Barber. Sabe que puede pedir que la quitemos
+        cuando quiera.
+      </span>
+    </label>
+    <p class="aviso">
+      Sin esto no sigas: publicar la foto de alguien sin permiso va en contra
+      de la ley de datos personales (Ley 1581 de 2012).
+    </p>
+  </section>
+
+  <!-- 2. Foto -->
+  <section class="paso">
+    <h2><b>2</b> Foto del cliente</h2>
+    <div class="foto-zona">
+      <div class="foto-prev" id="prev">Sin foto</div>
+      <div>
+        <input type="file" id="archivo" accept="image/*" capture="user">
+        <p class="aviso">Opcional. Se recorta en círculo y se achica sola.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Datos -->
+  <section class="paso">
+    <h2><b>3</b> Qué dijo</h2>
+    <label class="campo">
+      <span>Nombre como quiere aparecer</span>
+      <input type="text" id="nombre" placeholder="Andrés M." autocomplete="off">
+    </label>
+    <label class="campo">
+      <span>Sus palabras</span>
+      <textarea id="texto" placeholder="Escribe tal cual lo que dijo, sin adornarlo."></textarea>
+    </label>
+    <label class="campo">
+      <span>Estrellas</span>
+      <select id="estrellas">
+        <option value="5">★★★★★ — 5</option>
+        <option value="4">★★★★☆ — 4</option>
+        <option value="3">★★★☆☆ — 3</option>
+        <option value="2">★★☆☆☆ — 2</option>
+        <option value="1">★☆☆☆☆ — 1</option>
+        <option value="0">No se lo pregunté</option>
+      </select>
+    </label>
+  </section>
+
+  <!-- 4. Resultado -->
+  <section class="paso">
+    <h2><b>4</b> Listo para publicar</h2>
+    <p class="falta" id="falta">Faltan el permiso, el nombre y el texto.</p>
+
+    <div class="salida" id="salida">
+      <p style="font-size:.85rem">Pega esto en <code style="all:unset;font-family:monospace;background:var(--cream-deep);padding:.1rem .3rem">resenas.js</code>, dentro de los corchetes:</p>
+      <code id="snippet"></code>
+      <div class="botones">
+        <button type="button" class="btn btn--wine btn--sm" id="copiar">Copiar texto</button>
+        <a class="btn btn--dark btn--sm" id="bajar" download>Descargar la foto</a>
+        <a class="btn btn--ghost btn--sm" id="enviar" target="_blank" rel="noopener">Enviarlo por WhatsApp</a>
+      </div>
+      <p class="aviso" id="ruta"></p>
+    </div>
+  </section>
+
+  <a class="btn btn--ghost btn--sm" href="index.html" style="margin-top:1.5rem">‹ Volver a la página</a>
+</main>
+
+<script src="script.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const $ = (id) => document.getElementById(id);
+  let fotoURL = "", fotoNombre = "";
+
+  /** "Andrés M." → "andres-m" */
+  const slug = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "cliente";
+
+  /* Recorta la foto en cuadrado, la achica a 200px y la comprime. */
+  $("archivo").addEventListener("change", (e) => {
+    const f = e.target.files[0];
+    if (!f) return;
+    const img = new Image();
+    img.onload = () => {
+      const lado = Math.min(img.width, img.height);
+      const c = document.createElement("canvas");
+      c.width = c.height = 200;
+      c.getContext("2d").drawImage(img,
+        (img.width - lado) / 2, (img.height - lado) / 2, lado, lado, 0, 0, 200, 200);
+      c.toBlob((b) => {
+        if (fotoURL) URL.revokeObjectURL(fotoURL);
+        fotoURL = URL.createObjectURL(b);
+        $("prev").innerHTML = `<img src="${fotoURL}" alt="">`;
+        pintar();
+      }, "image/jpeg", 0.8);
+      URL.revokeObjectURL(img.src);
+    };
+    img.src = URL.createObjectURL(f);
+  });
+
+  function pintar() {
+    const nombre = $("nombre").value.trim();
+    const texto = $("texto").value.trim();
+    const ok = $("permiso").checked && nombre && texto;
+
+    $("salida").classList.toggle("activa", ok);
+    $("falta").style.display = ok ? "none" : "block";
+
+    const faltan = [];
+    if (!$("permiso").checked) faltan.push("el permiso");
+    if (!nombre) faltan.push("el nombre");
+    if (!texto) faltan.push("el texto");
+    $("falta").textContent = faltan.length
+      ? "Falta " + faltan.join(", ").replace(/, ([^,]*)$/, " y $1") + "."
+      : "";
+
+    if (!ok) return;
+
+    fotoNombre = slug(nombre) + ".jpg";
+    const fecha = new Date().toISOString().slice(0, 7);
+    const est = +$("estrellas").value;
+    const q = (s) => JSON.stringify(s);
+
+    const snippet =
+`  {
+    foto: ${q(fotoURL ? "img/resenas/" + fotoNombre : "")},
+    nombre: ${q(nombre)},
+    texto: ${q(texto)},
+    estrellas: ${est},
+    fecha: ${q(fecha)},
+  },`;
+
+    $("snippet").textContent = snippet;
+
+    const bajar = $("bajar");
+    if (fotoURL) {
+      bajar.href = fotoURL;
+      bajar.download = fotoNombre;
+      bajar.style.display = "";
+      $("ruta").textContent = `Guarda la foto en la carpeta img/resenas/ con el nombre ${fotoNombre}`;
+    } else {
+      bajar.style.display = "none";
+      $("ruta").textContent = "Esta reseña va sin foto.";
+    }
+
+    const tel = (typeof CONFIG !== "undefined" && CONFIG.whatsapp) || "";
+    $("enviar").href = "https://wa.me/" + tel + "?text=" +
+      encodeURIComponent("Nueva reseña para la página:\n\n" + snippet +
+        (fotoURL ? "\n\n(Te mando la foto en el siguiente mensaje)" : ""));
+  }
+
+  ["permiso", "nombre", "texto", "estrellas"].forEach((id) => {
+    $(id).addEventListener("input", pintar);
+    $(id).addEventListener("change", pintar);
+  });
+
+  $("copiar").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText($("snippet").textContent);
+      $("copiar").textContent = "¡Copiado!";
+      setTimeout(() => ($("copiar").textContent = "Copiar texto"), 1800);
+    } catch {
+      const r = document.createRange();
+      r.selectNodeContents($("snippet"));
+      getSelection().removeAllRanges();
+      getSelection().addRange(r);
+    }
+  });
+
+  pintar();
+});
+</script>
+</body>
+</html>

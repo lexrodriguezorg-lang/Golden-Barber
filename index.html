@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Barber — Barbería en La Dorada, Caldas | Javi Velásquez</title>
+
+<meta name="description" content="Barbería en La Dorada, Caldas. Corte clásico, barba y combo con atención personalizada. Solicita tu cita con Javi Velásquez en Golden Barber.">
+<meta name="theme-color" content="#080806">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Golden Barber — Estilo, calidad y confianza">
+<meta property="og:description" content="Barbería en La Dorada, Caldas. Solicita tu cita con Javi Velásquez.">
+<meta property="og:image" content="img/golden-logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/favicon-golden.png">
+<link rel="apple-touch-icon" href="img/favicon-golden.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Oswald:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- Marca que sí hay JavaScript. Sin esto, las secciones que
+     aparecen al hacer scroll nunca se esconden: prefiero una
+     página sin animación a una página en blanco. -->
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<a class="skip-link" href="#servicios">Saltar al contenido</a>
+
+<!-- ══ NAV ══════════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="#top" aria-label="Golden Barber — inicio">
+      <img class="nav__logo" src="img/emblem-golden.webp" alt="" width="40" height="40">
+      <span>Golden Barber <small>La Dorada</small></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Cortes</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a class="btn btn--sm btn--wine" href="#reservar">Solicitar cita</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ HERO ═════════════════════════════════════════════ -->
+<main id="top">
+<section class="hero">
+  <div class="wrap hero__frame">
+    <div class="hero__emblem">
+      <img src="img/golden-logo.webp" alt="Logotipo de Golden Barber"
+           width="320" height="320"
+           onerror="this.closest('.hero__emblem').classList.add('is-empty')">
+      <span class="hero__emblem-fallback" aria-hidden="true">Golden<br>Barber</span>
+    </div>
+
+    <div class="hero__copy">
+      <p class="ornament" aria-hidden="true">✂</p>
+      <p class="hero__eyebrow">Barbería en La Dorada</p>
+      <h1>El arte del<br><em>corte perfecto</em></h1>
+      <p class="hero__tagline">Clásico &middot; Elegante &middot; Dorado</p>
+      <p class="hero__sub">Atención personalizada, detalle y una silla reservada para ti.</p>
+
+      <div class="hero__cta">
+        <a class="btn btn--wine" href="#reservar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v3M17 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
+          Solicitar cita
+        </a>
+        <a class="btn btn--dark" href="#" data-wa>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          WhatsApp 350 473 7330
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Poste de barbero: la única animación que corre sola, porque
+     es el símbolo del oficio. Se detiene con prefers-reduced-motion. -->
+<div class="poste" aria-hidden="true"></div>
+
+<!-- ══ SOBRE JAVI ═══════════════════════════════════════ -->
+<section class="about band-dark" id="javi">
+  <div class="wrap about__inner">
+    <figure class="about__photo">
+      <img src="img/javi-golden.jpg" alt="Javi Velásquez, barbero de Golden Barber"
+           width="640" height="720" loading="lazy"
+           onerror="this.closest('.about__photo').classList.add('is-empty')">
+    </figure>
+
+    <div class="about__copy">
+      <p class="section-kicker">El barbero detrás de la silla</p>
+      <h2 class="heading heading--gold heading--left">Javi Velásquez</h2>
+      <p>
+        Acá no hay turnos de quince minutos ni tres clientes al tiempo.
+        Entra uno, se sienta, hablamos de qué quiere, y nos paramos
+        cuando quedó bien.
+      </p>
+      <p>
+        Me gusta lo clásico: la tijera, el acabado limpio y el tiempo necesario
+        para que cada detalle quede bien.
+      </p>
+      <p class="about__firma">
+        Estilo, calidad y confianza. Así es Golden Barber.
+      </p>
+      <p class="ornament" aria-hidden="true">✂</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICIOS ════════════════════════════════════════ -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <h2 class="heading">Menú de servicios</h2>
+
+    <ul class="services__grid">
+      <li class="service">
+        <span class="service__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M8.1 15.9 20 4"/></svg>
+        </span>
+        <div>
+          <h3>Corte clásico</h3>
+          <p>Corte de cabello tradicional, asesoría de estilo y acabado limpio.</p>
+          <p class="service__meta"><span class="service__time">30 min</span></p>
+          <p class="service__price">$&nbsp;25.000</p>
+        </div>
+      </li>
+
+      <li class="service">
+        <span class="service__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 8c2.5 0 3.5 2 4.5 2S10 8 12 8s2.5 2 3.5 2S17.5 8 20 8c0 5-3.6 9-8 9s-8-4-8-9z"/></svg>
+        </span>
+        <div>
+          <h3>Barba</h3>
+          <p>Arreglo, perfilado y acabado de barba.</p>
+          <p class="service__meta"><span class="service__time">20 min</span></p>
+          <p class="service__price">$&nbsp;20.000</p>
+        </div>
+      </li>
+
+      <li class="service service--featured">
+        <span class="service__badge">Más pedido</span>
+        <span class="service__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><path d="M7.7 7.7 18 18"/><path d="M6 14c1.7 0 2.4 1.4 3.1 1.4S10.4 14 11.8 14s1.7 1.4 2.4 1.4S15.6 14 17.3 14c0 3.4-2.5 6.1-5.6 6.1S6 17.4 6 14z"/></svg>
+        </span>
+        <div>
+          <h3>Combo corte + barba</h3>
+          <p>Corte de cabello y arreglo de barba en una sola cita.</p>
+          <p class="service__meta"><span class="service__time">45 min</span> <span class="service__save">ahorras $5.000</span></p>
+          <p class="service__price">$&nbsp;40.000</p>
+        </div>
+      </li>
+    </ul>
+
+    <p class="services__note">Todos los servicios incluyen productos de acabado.</p>
+  </div>
+</section>
+
+<!-- ══ GALERÍA ══════════════════════════════════════════ -->
+<section class="gallery" id="galeria">
+  <div class="wrap">
+    <p class="section-kicker section-kicker--center">Encuentra tu próximo estilo</p>
+    <h2 class="heading">Referencias de corte</h2>
+
+    <ul class="gallery__grid">
+      <!-- Fotos en 800x1000 px, .jpg, dentro de /img/
+           data-estilo  → el nombre que le llega a Javi por WhatsApp
+           data-servicio → qué servicio queda preseleccionado en la agenda -->
+      <li data-estilo="Skin fade alto con acabado texturizado" data-servicio="corte">
+        <button type="button" class="foto"><img src="img/corte-1.jpg" alt="Skin fade alto con acabado texturizado arriba" width="400" height="500" loading="lazy" onerror="this.closest('li').classList.add('is-empty')"><span class="foto__ver">Ver corte</span></button>
+      </li>
+      <li data-estilo="Mid fade con comb over y barba perfilada" data-servicio="combo">
+        <button type="button" class="foto"><img src="img/corte-2.jpg" alt="Mid fade con comb over y barba perfilada" width="400" height="500" loading="lazy" onerror="this.closest('li').classList.add('is-empty')"><span class="foto__ver">Ver corte</span></button>
+      </li>
+      <li data-estilo="Taper fade con rizos definidos" data-servicio="corte">
+        <button type="button" class="foto"><img src="img/corte-3.jpg" alt="Taper fade con rizos definidos" width="400" height="500" loading="lazy" onerror="this.closest('li').classList.add('is-empty')"><span class="foto__ver">Ver corte</span></button>
+      </li>
+      <li data-estilo="Buzz cut degradado con perfilado de barba" data-servicio="combo">
+        <button type="button" class="foto"><img src="img/corte-4.jpg" alt="Buzz cut degradado con perfilado de barba" width="400" height="500" loading="lazy" onerror="this.closest('li').classList.add('is-empty')"><span class="foto__ver">Ver corte</span></button>
+      </li>
+      <li data-estilo="Pompadour con low fade" data-servicio="corte">
+        <button type="button" class="foto"><img src="img/corte-5.jpg" alt="Pompadour con low fade" width="400" height="500" loading="lazy" onerror="this.closest('li').classList.add('is-empty')"><span class="foto__ver">Ver corte</span></button>
+      </li>
+      <li data-estilo="Undercut con flequillo texturizado" data-servicio="corte">
+        <button type="button" class="foto"><img src="img/corte-6.jpg" alt="Undercut con flequillo texturizado" width="400" height="500" loading="lazy" onerror="this.closest('li').classList.add('is-empty')"><span class="foto__ver">Ver corte</span></button>
+      </li>
+    </ul>
+
+    <p class="gallery__note">
+      Muéstranos el estilo que buscas y Javi te orientará según tu cabello y rostro.
+    </p>
+  </div>
+</section>
+
+<!-- ══ TIENDA ══════════════════════════════════════════ -->
+<section class="shop band-dark" id="tienda">
+  <div class="wrap">
+    <div class="shop__head">
+      <div>
+        <p class="section-kicker">Selección Golden</p>
+        <h2 class="heading heading--gold heading--left">Productos que llegan de Medellín</h2>
+      </div>
+      <p>Cuidado, herramientas y accesorios elegidos por Javi. La disponibilidad cambia con cada llegada.</p>
+    </div>
+    <div class="shop__grid" id="productos-grid"></div>
+    <div class="shop__empty" id="productos-vacio">
+      <p><strong>¿Buscas algún producto?</strong><br>Pregúntanos qué acaba de llegar y te confirmamos disponibilidad y precio.</p>
+      <a class="btn btn--gold" href="#" data-shop-wa>Consultar por WhatsApp</a>
+    </div>
+    <aside class="cart" id="carrito" hidden>
+      <div><strong>Tu pedido</strong><span id="carrito-resumen"></span></div>
+      <button class="btn btn--gold" type="button" id="pedir-productos">Pedir por WhatsApp</button>
+    </aside>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIOS ══════════════════════════════════════ -->
+<section class="reviews">
+  <div class="wrap">
+    <h2 class="heading">Lo que dicen nuestros clientes</h2>
+
+    <!-- Las reseñas salen de resenas.js. Mientras no haya ninguna,
+         aquí se muestra la invitación a dejar la primera. -->
+    <ul class="reviews__grid" id="resenas-grid"></ul>
+    <div id="resenas-invita"></div>
+  </div>
+</section>
+
+<!-- ══ UBICACIÓN Y HORARIO ══════════════════════════════ -->
+<section class="location band-dark" id="ubicacion">
+  <div class="wrap location__inner">
+    <div class="location__place">
+      <h2 class="heading heading--gold heading--left">Ubicación y horario</h2>
+      <p class="location__address">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <span>
+          <strong>La Dorada, Caldas</strong><br>
+          Cra. 5 con calle 10B, esquina
+        </span>
+      </p>
+      <a class="btn btn--ghost" href="https://maps.google.com/?q=Cra+5+con+calle+10B,+La+Dorada,+Caldas" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+
+    <div class="location__hours">
+      <table class="hours">
+        <caption class="sr-only">Horario de atención</caption>
+        <tbody>
+          <tr><th scope="row">Lunes</th><td>9:00 AM – 7:00 PM</td></tr>
+          <tr><th scope="row">Martes</th><td>9:00 AM – 7:00 PM</td></tr>
+          <tr><th scope="row">Miércoles</th><td>9:00 AM – 7:00 PM</td></tr>
+          <tr><th scope="row">Jueves</th><td>9:00 AM – 7:00 PM</td></tr>
+          <tr><th scope="row">Viernes</th><td>9:00 AM – 7:00 PM</td></tr>
+          <tr><th scope="row">Sábado</th><td>8:30 AM – 6:00 PM</td></tr>
+          <tr><th scope="row">Domingo</th><td>10:00 AM – 2:00 PM</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESERVA ══════════════════════════════════════════ -->
+<section class="booking" id="reservar">
+  <div class="wrap">
+    <h2 class="heading">Solicita tu cita</h2>
+    <p class="booking__lead">
+      Elige servicio, día y hora. La solicitud llega a WhatsApp y Javi confirma el cupo.
+      Sin llamadas y sin esperar parado en la puerta.
+    </p>
+
+    <!-- Agenda en 3 pasos. Todo el contenido lo pinta script.js.
+         Si en CONFIG se define un calLink de Cal.com, este bloque se
+         reemplaza automáticamente por el calendario de Cal.com. -->
+    <div class="agenda" id="agenda">
+
+      <!-- Cada paso es un botón: se puede volver atrás tocándolo. -->
+      <ol class="agenda__bar" aria-label="Progreso de la reserva">
+        <li><button type="button" data-bar="1" class="is-active"><span>1</span>Servicio</button></li>
+        <li><button type="button" data-bar="2" disabled><span>2</span>Fecha y hora</button></li>
+        <li><button type="button" data-bar="3" disabled><span>3</span>Confirmar</button></li>
+      </ol>
+
+      <!-- Paso 1 ─────────────────────────────────────── -->
+      <section class="agenda__panel" data-panel="1" aria-label="Paso 1: elegir servicio">
+        <h3 class="agenda__title">Selecciona un servicio</h3>
+        <p class="ornament" aria-hidden="true">✂</p>
+        <ul class="agenda__servicios" id="agenda-servicios"></ul>
+        <p class="agenda__nota">Servicios realizados por Javi.</p>
+      </section>
+
+      <!-- Paso 2 ─────────────────────────────────────── -->
+      <section class="agenda__panel" data-panel="2" aria-label="Paso 2: elegir fecha y hora" hidden>
+        <h3 class="agenda__title">Fecha y hora</h3>
+        <p class="ornament" aria-hidden="true">✂</p>
+
+        <div class="cal">
+          <div class="cal__head">
+            <button type="button" class="cal__nav" id="cal-prev" aria-label="Mes anterior">‹</button>
+            <p class="cal__month" id="cal-month" aria-live="polite"></p>
+            <button type="button" class="cal__nav" id="cal-next" aria-label="Mes siguiente">›</button>
+          </div>
+          <ol class="cal__dows" aria-hidden="true">
+            <li>Lun</li><li>Mar</li><li>Mié</li><li>Jue</li><li>Vie</li><li>Sáb</li><li>Dom</li>
+          </ol>
+          <div class="cal__grid" id="cal-grid" role="grid"></div>
+        </div>
+
+        <h4 class="agenda__sub" id="slots-title">Horas disponibles</h4>
+        <div class="slots" id="slots" aria-live="polite"></div>
+
+        <p class="agenda__tz">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Zona horaria: Colombia (COT)
+        </p>
+        <button type="button" class="agenda__volver" data-volver="1">‹ Cambiar servicio</button>
+      </section>
+
+      <!-- Paso 3 ─────────────────────────────────────── -->
+      <section class="agenda__panel" data-panel="3" aria-label="Paso 3: confirmar" hidden>
+        <h3 class="agenda__title">Confirmar cita</h3>
+        <p class="ornament" aria-hidden="true">✂</p>
+
+        <dl class="resumen" id="resumen"></dl>
+
+        <label class="campo" for="cliente">
+          <span>Tu nombre</span>
+          <input type="text" id="cliente" name="cliente" autocomplete="name"
+                 placeholder="Para que Javi sepa quién eres" required>
+        </label>
+
+        <button type="button" class="btn btn--wine agenda__confirmar" id="confirmar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          Confirmar por WhatsApp
+        </button>
+
+        <p class="agenda__aviso">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+          Se abrirá WhatsApp con tu cita ya escrita. Javi te responde confirmando el cupo.
+        </p>
+        <button type="button" class="agenda__volver" data-volver="2">‹ Cambiar fecha</button>
+      </section>
+
+      <noscript>
+        <p class="booking__fallback">
+          Para agendar necesitas JavaScript activado. También puedes escribirnos por
+          <a href="https://wa.me/573504737330">WhatsApp</a>.
+        </p>
+      </noscript>
+    </div>
+
+    <p class="booking__alt">
+      ¿Prefieres escribir directo? <a href="#" data-wa>Agenda por WhatsApp</a>
+    </p>
+  </div>
+</section>
+<!-- ══ ESLOGAN ══════════════════════════════════════════ -->
+<aside class="eslogan">
+  <p><span aria-hidden="true">✂</span> Más que un corte, una actitud <span aria-hidden="true">✂</span></p>
+</aside>
+</main>
+
+<div class="poste" aria-hidden="true"></div>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="img/emblem-golden.webp" alt="" width="56" height="56" loading="lazy">
+      <div>
+        <p class="footer__name">Golden Barber</p>
+        <p class="footer__tag">Estilo &middot; Calidad &middot; Confianza</p>
+      </div>
+    </div>
+
+    <div class="footer__contact">
+      <a class="footer__phone" href="#" data-wa>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+        350 473 7330
+      </a>
+      <p class="footer__legal">
+        © <span id="year">2026</span> Golden Barber. Todos los derechos reservados.<br>
+        <a href="privacidad.html">Política de tratamiento de datos</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ VISOR DE CORTES ══════════════════════════════════
+     Se abre al tocar una foto de la galería. Lo importante
+     no es ver la foto grande: es el botón de abajo, que lleva
+     a la agenda con ese estilo ya anotado para Javi. -->
+<dialog class="visor" id="visor" aria-label="Ver corte">
+  <button type="button" class="visor__cerrar" id="visor-cerrar" aria-label="Cerrar">×</button>
+
+  <div class="visor__marco">
+    <button type="button" class="visor__nav" id="visor-ant" aria-label="Corte anterior">‹</button>
+    <img id="visor-img" src="" alt="">
+    <button type="button" class="visor__nav" id="visor-sig" aria-label="Corte siguiente">›</button>
+  </div>
+
+  <div class="visor__pie">
+    <p class="visor__titulo" id="visor-titulo"></p>
+    <button type="button" class="btn btn--wine" id="visor-agendar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v3M17 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
+      Quiero este corte
+    </button>
+    <p class="visor__nota">Javi recibe cuál estilo elegiste junto con tu cita.</p>
+  </div>
+</dialog>
+
+<!-- ══ WHATSAPP FLOTANTE (móvil) ════════════════════════ -->
+<a class="fab" href="#" data-wa aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+</a>
+
+<!-- ══ SEO: datos estructurados ═════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Golden Barber",
+  "description": "Barbería en La Dorada, Caldas. Corte clásico, barba y combo con atención personalizada.",
+  "image": "img/golden-logo.webp",
+  "telephone": "+573504737330",
+  "priceRange": "$",
+  "currenciesAccepted": "COP",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cra. 5 con calle 10B, esquina",
+    "addressLocality": "La Dorada",
+    "addressRegion": "Caldas",
+    "addressCountry": "CO"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:30", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "14:00" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Menú de servicios",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corte clásico" }, "price": "25000", "priceCurrency": "COP" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Barba" }, "price": "20000", "priceCurrency": "COP" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Combo corte + barba" }, "price": "40000", "priceCurrency": "COP" }
+    ]
+  },
+  "sameAs": []
+}
+</script>
+
+<script src="resenas.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
