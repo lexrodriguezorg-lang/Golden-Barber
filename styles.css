@@ -1023,14 +1023,9 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round
    Oscuro y dorado con aire editorial; el oro guía, no satura.
    ══════════════════════════════════════════════════════ */
 .nav { background: rgb(7 7 6 / .94); border-bottom-color: rgb(214 175 82 / .28); }
-.nav__inner { min-height: 72px; }
-.nav__logo { width: 44px; height: 44px; border-radius: 50%; }
-.nav__brand { line-height: 1; font-size: 1.05rem; }
-.nav__brand small {
-  display: block; margin-top: .28rem; color: var(--gold);
-  font-family: var(--body); font-size: .58rem; font-weight: 600;
-  letter-spacing: .24em;
-}
+.nav__inner { min-height: 84px; }
+.nav__logo { width: 72px; height: 72px; object-fit: contain; border-radius: 0; }
+.nav__brand { line-height: 1; }
 .nav__links { gap: 1.35rem; }
 
 .btn--wine { --btn-bg: linear-gradient(135deg, #E0BB62, #B77E1E); --btn-fg: #090908; }
@@ -1044,7 +1039,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round
     radial-gradient(circle at 80% 65%, rgb(214 175 82 / .07), transparent 36%),
     linear-gradient(135deg, #050505, #11110f 55%, #070706);
 }
-.hero { min-height: calc(100svh - 72px); display: grid; align-items: center; padding-block: clamp(2rem, 6vw, 5rem); }
+.hero { min-height: calc(100svh - 84px); display: grid; align-items: center; padding-block: clamp(2rem, 6vw, 5rem); }
 .hero::before {
   background: repeating-conic-gradient(from 0deg at 24% 50%,
     rgb(214 175 82 / .035) 0deg 1deg, transparent 1deg 6deg) !important;
